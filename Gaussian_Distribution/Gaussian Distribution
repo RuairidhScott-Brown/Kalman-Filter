@@ -1,0 +1,31 @@
+#Ruairidh Scott-Brown
+#Attempt to simulate random data  with Gaussina Distribution
+
+
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+from matplotlib import style
+import numpy as np
+import time
+
+style.use("fivethirtyeight")
+fig = plt.figure()
+ax1 = fig.add_subplot(1,1,1)
+
+def animate(i):
+    mean = 0
+    deviation = 2
+    sx =[]
+    sy =[]
+    for i in range(1):
+        time.sleep(0.005)
+        x = np.random.normal(mean, deviation, 1)
+        y = np.random.normal(mean, deviation, 1)
+        sx.append(x)
+        sy.append(y)
+        print(sx)
+        print(sy)
+    ax1.scatter(sx, sy)
+
+ani = animation.FuncAnimation(fig, animate, interval = 100)
+plt.show()
