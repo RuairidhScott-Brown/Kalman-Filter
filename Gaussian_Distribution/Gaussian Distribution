@@ -23,8 +23,8 @@ def animate(i):
         y = np.random.normal(mean, deviation, 1)
         sx.append(x)
         sy.append(y)
-        print(sx)
-        print(sy)
+        print(x)
+        print(y)
     ax1.scatter(sx, sy)
 
 ani = animation.FuncAnimation(fig, animate, interval = 100)
